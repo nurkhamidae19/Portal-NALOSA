@@ -84,7 +84,7 @@
       </div></a>
     </div><!-- Footer -->
     <div class="text-center mt-16 text-white text-opacity-80">
-     <p>© 2024 SDN 01 Nambangan Lor. Semua Hak Dilindungi.</p>
+     <p id="footerText"></p>
     </div>
    </div>
   </div>
@@ -123,6 +123,7 @@
       // Apply text colors
       document.getElementById('schoolName').style.color = secondaryColor;
       document.getElementById('schoolTagline').style.color = secondaryColor;
+      document.getElementById('footerText').style.color = secondaryColor;
 
       // Apply card colors
       const cards = document.querySelectorAll('.card-hover');
@@ -152,6 +153,7 @@
       // Apply font sizes
       document.getElementById('schoolName').style.fontSize = `${fontSize * 3.125}px`;
       document.getElementById('schoolTagline').style.fontSize = `${fontSize * 1.25}px`;
+      document.getElementById('footerText').style.fontSize = `${fontSize}px`;
       titles.forEach(title => {
         title.style.fontSize = `${fontSize * 1.5}px`;
       });
@@ -168,6 +170,10 @@
       document.getElementById('asesmenDesc').textContent = config.asesmen_desc || defaultConfig.asesmen_desc;
       document.getElementById('raportTitle').textContent = config.raport_title || defaultConfig.raport_title;
       document.getElementById('raportDesc').textContent = config.raport_desc || defaultConfig.raport_desc;
+      
+      // Update footer with current year
+      const currentYear = new Date().getFullYear();
+      document.getElementById('footerText').textContent = `© ${currentYear} SDN 01 Nambangan Lor.`;
     }
 
     function adjustColorBrightness(hex, percent) {
@@ -271,5 +277,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c55c577e550aa09',t:'MTc2OTY1ODY4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c55d82454b8a19c',t:'MTc2OTY1OTQ1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
